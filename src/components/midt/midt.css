@@ -1,0 +1,133 @@
+.Midt {
+    background-color: rgb(241, 241, 241);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.container-slideshow {
+    display: flex;
+    justify-content: center;
+    gap: 3.5%;
+    padding: 0 45px;
+}
+
+.container-antal {
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 0 30px 0;
+    color: rgb(87, 87, 87);
+}
+
+.container-slideshow button {
+    height: 80px;
+    align-self: center;
+}
+
+.billeder {
+    max-width: 25%;
+    max-height: 33.35%;
+    box-shadow: 0 0 8px rgb(0, 0, 0);
+    transition-duration: 1s;
+}
+
+.midt-billede {
+    transform: scale(1.06);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+
+.billeder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.midt-billede:hover {
+    transform: scale(1.09);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+
+.container-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 40px 0 20px 0;
+}
+
+.dots {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(165, 165, 165);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active,
+.dots:hover {
+  background-color: rgb(112, 112, 112);
+}
+div.container-slideshow button:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+
+.slideshow-knap {
+    display: flex;
+    justify-content: end;
+    padding: 0 40px 10px 0;
+}
+
+#tilfoj {
+    position: absolute;
+    margin: -50px auto auto auto;
+}
+
+#slet {
+    background: none;
+    border: none;
+    top: 69.5em;
+    position: absolute;
+    opacity: 70%;
+    transition: 0.3s;
+    right: 38%;
+}
+
+#slet:hover {
+    transition: 0.3s;
+    opacity: 100%;
+}
+
+.adminhidden {
+    display: none
+}
+
+@media screen and (max-width: 550px) {
+    .Midt {
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width: 551px) and ( max-width: 1024px) {
+    .container-slideshow button {
+        display: none;
+    }
+    .billeder {
+        max-width: 30%;
+    }
+    #slet {
+        display: block;
+        right: 35.8%;
+    }
+}
+
+@media screen and (min-width: 551px) and ( max-width: 768px) {
+    #slet {
+        top: 75.9em;
+        right: 36%;
+    }
+}

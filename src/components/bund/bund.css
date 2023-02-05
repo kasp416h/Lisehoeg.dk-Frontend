@@ -1,0 +1,73 @@
+.Bund h1, h2, h3 {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #6e6e6e;
+    font-weight: bold;
+}
+
+.Bund {
+    padding: 100px 0;
+}
+
+.Bund h1 {
+    font-size: 60px;
+    padding: 0 0 60px 0;
+    display: flex;
+    justify-content: center;
+    
+}
+.Bund div {
+    display: flex;
+    justify-content: space-evenly;
+}
+.Bund section {
+    width: 400px;
+    height: 200px;
+    text-align: center;
+}
+
+.Bund h3 {
+    padding: 10px 0 0 0;
+}
+
+#fb {
+    font-size: 38px;
+}
+
+@media screen and ( max-width: 1024px) {
+    .Bund div {
+        flex-direction: column;
+        align-items: center;
+    }
+    .Bund h2 {
+        font-size: 40px;
+    }
+    .Bund h1 {
+        font-size: 55px;
+        padding: 0 0 20px 0;
+    }
+    .Bund h3 {
+        font-size: 30px;
+    }
+    #fb {
+        font-size: 45px;
+    }
+}
+
+@media screen and ( max-width: 550px) {
+    .Bund h1 {
+        font-size: 32px;
+        padding: 0 0 10px 0;
+    }
+    .Bund h2  {
+        font-size: calc(1.325rem + .9vw);
+    }
+    .Bund h3 {
+        font-size:  calc(1.3rem + .6vw);
+    }
+    #fb {
+        font-size: 32px;
+    }
+    .Bund section {
+        width: 100%;
+    }
+}

@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react'
+import { Top, Midt, Carousel, Bund } from './components/index'
+import './app.css'
 
-function App() {
+import { propHandler } from './api/propHandler';
+
+
+const App = () => {
+  const [auth, setAuth] = useState(false);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      const result = await propHandler();
+      setImages(result.slideshow);
+      setAuth(Boolean(result.auth));
+    }
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Top />
+      <Midt slideshow={images} auth={auth}/>
+      <Carousel slideshow={images}/>
+      <Bund />
     </div>
-  );
+  )
 }
 
-export default App;
+  export default App
